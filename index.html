@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Преобразование изображения</title>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <style>
+    canvas { border: 1px solid #ccc; margin: 10px; }
+    .container { display: flex; flex-wrap: wrap; }
+  </style>
+</head>
+
+<body>
+  <h2>Преобразование изображения в оттенки серого</h2>
+  <input type="file" id="upload" accept="image/*">
+  <div class="container">
+    <div>
+      <canvas id="original" width="300" height="300"></canvas>
+      <p>Оригинал</p>
+    </div>
+    <div>
+      <canvas id="gray1" width="300" height="300"></canvas>
+      <p>NTSC RGB</p>
+    </div>
+    <div>
+      <canvas id="gray2" width="300" height="300"></canvas>
+      <p>sRGB</p>
+    </div>
+    <div>
+      <canvas id="diff" width="300" height="300"></canvas>
+      <p>Разность</p>
+    </div>
+  </div>
+  
+  <h3>Гистограммы</h3>
+  <canvas id="hist1" width="400" height="200"></canvas>
+  <canvas id="hist2" width="400" height="200"></canvas>
+
+  <script src="script.js"></script>
+</body>
+
+</html>
