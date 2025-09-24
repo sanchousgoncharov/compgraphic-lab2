@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<body>
+    <div style="display: flex; flex-direction: column; align-items: center; ">
+        <canvas id="canvas"></canvas>
+
+        <div style="display: flex; gap: 30px; padding: 20px; ">
+            <div>
+                <div>Hue: <span id="hueVal">0</span></div>
+                <input type="range" id="hue" min="0" max="360" value="0" style="width: 200;">
+            </div>
+            <div>
+                <div>Saturation: <span id="saturationVal">0</span></div>
+                <input type="range" id="saturation" min="-100" max="100" value="0" style="width: 200;">
+            </div>
+            <div>
+                <div>Value: <span id="valueVal">0</span></div>
+                <input type="range" id="value" min="-100" max="100" value="0" style="width: 200;">
+            </div>
+        </div>
+
+        <input type="file" id="upload" accept="image/*" style="padding: 30px;">
+        <button id="download">Скачать</button>
+        
+    </div>
+    <script src="script.js"></script>
+</body>
