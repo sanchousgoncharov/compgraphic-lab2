@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Извлечение каналов RGB и гистограммы</title>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Извлечение каналов R, G, B и построение гистограмм</h1>
+        
+        <div class="upload-section">
+            <input type="file" id="upload" accept="image/*">
+            <button id="processBtn" disabled>Обработать изображение</button>
+        </div>
+        
+        <div class="image-grid">
+            <div class="image-container">
+                <h2>Оригинал</h2>
+                <canvas id="original" width="300" height="300"></canvas>
+            </div>
+            <div class="image-container">
+                <h2>Канал R (красный)</h2>
+                <canvas id="channelR" width="300" height="300"></canvas>
+            </div>
+            <div class="image-container">
+                <h2>Канал G (зеленый)</h2>
+                <canvas id="channelG" width="300" height="300"></canvas>
+            </div>
+            <div class="image-container">
+                <h2>Канал B (синий)</h2>
+                <canvas id="channelB" width="300" height="300"></canvas>
+            </div>
+        </div>
+        
+        <h2>Гистограммы каналов</h2>
+        <div class="histogram-container">
+            <div class="histogram">
+                <h3>Гистограмма канала R</h3>
+                <canvas id="histR" width="400" height="200"></canvas>
+            </div>
+            <div class="histogram">
+                <h3>Гистограмма канала G</h3>
+                <canvas id="histG" width="400" height="200"></canvas>
+            </div>
+            <div class="histogram">
+                <h3>Гистограмма канала B</h3>
+                <canvas id="histB" width="400" height="200"></canvas>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
